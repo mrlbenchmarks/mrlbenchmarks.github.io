@@ -449,12 +449,11 @@ footer a:hover { color: #fff; }
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge"><span class="dot">●</span> MRL Workshop @ EMNLP 2025 · Concluded</div>
     <h1>MRL 2025<br>Shared Task</h1>
-    <h1 style="font-size:clamp(1.2rem,3vw,2rem); color:var(--yellow); margin-top:0.3rem;">Global <span style="color:#fff;">PIQA</span></h1>
+    <h1><span style="color:#fff;">Global PIQA</span></h1>
     <p class="hero-sub">Multilingual Physical Reasoning Datasets</p>
     <p class="hero-desc">
-      A community-built multilingual physical commonsense reasoning benchmark. Global PIQA v0.1 covers <strong style="color:#fff;">100+ languages</strong> across five continents, 14 language families, and 23 writing systems — created by language community members themselves.
+      A community-built multilingual physical commonsense reasoning benchmark. Global PIQA <strong style="color:#fff;">100+ languages</strong> across five continents, 14 language families, and 23 writing systems — created by language community members themselves.
     </p>
     <div class="btn-row">
       <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel" class="btn btn-orange">🤗 Dataset on HF</a>
@@ -463,7 +462,6 @@ footer a:hover { color: #fff; }
         Preprint
       </a>
       <a href="https://github.com/mrlbenchmarks" class="btn btn-outline">GitHub</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc73SSB2Med_SEpsSvOEcw50g3Y1kkK6od8ZfRlL0162vi3lw/viewform?usp=header" class="btn btn-outline">Still Contribute →</a>
     </div>
   </div>
 </div>
@@ -507,14 +505,6 @@ footer a:hover { color: #fff; }
       <figcaption>Languages represented in Global PIQA, covering five continents, 14 language families, and 23 writing systems.</figcaption>
     </figure>
 
-    <div class="callout">
-      <h3>Still want to contribute?</h3>
-      <p>Global PIQA continues to accept submissions for languages and varieties not yet represented. Fill out the interest form and we'll be in touch.</p>
-      <div class="btn-row">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc73SSB2Med_SEpsSvOEcw50g3Y1kkK6od8ZfRlL0162vi3lw/viewform?usp=header" class="btn btn-orange">Register Interest</a>
-        <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel" class="btn btn-outline">View Dataset</a>
-      </div>
-    </div>
   </section>
 
   <!-- TASK FORMAT -->
@@ -523,21 +513,6 @@ footer a:hover { color: #fff; }
     <p>
       The MRL 2025 Shared Task accepted submissions of non-English PIQA-style datasets with accompanying dataset description papers.
     </p>
-
-    <div class="format-grid">
-      <div class="format-card">
-        <h4>Format</h4>
-        <p>A .tsv file with columns: <code>prompt</code>, <code>solution0</code>, <code>solution1</code>, <code>label</code>. Both solutions should differ by only one or two words.</p>
-      </div>
-      <div class="format-card orange">
-        <h4>Languages</h4>
-        <p>Any language other than English. Low-resource languages especially encouraged.</p>
-      </div>
-      <div class="format-card amber">
-        <h4>Size</h4>
-        <p>At least 100 original examples (not translated from English PIQA). Larger datasets encouraged.</p>
-      </div>
-    </div>
 
     <h3>Example items</h3>
     <div class="code-block">
@@ -557,76 +532,19 @@ footer a:hover { color: #fff; }
       <span class="punc">}</span>
     </div>
 
-    <h3>Guidelines</h3>
-    <ul style="padding-left:1.2rem; color:var(--slate); font-size:0.9rem; line-height:1.9;">
-      <li>Use items of variable length; avoid too many short items which may be trivial for larger models.</li>
-      <li>The two candidate solutions should differ in only one or two words.</li>
-      <li>Include culturally-relevant examples specific to your language community.</li>
-      <li>At least one native speaker must check each example.</li>
-      <li>Evaluations of existing models on the dataset are welcome but not required.</li>
-    </ul>
-    <p style="margin-top:1rem;">Full instructions and FAQs are on the <a href="https://docs.google.com/presentation/d/17zCG1zQOdr2cD-VRc7xlrPtpoE8yKIAdu00uRJTN9-M/edit?usp=sharing">organizer slides</a>.</p>
   </section>
 
-  <!-- DATES -->
-  <section id="dates">
-    <h2>Important Dates</h2>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-date done">June 2025</div>
-        <div class="tl-text"><strong>Call for participation released</strong></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date past">September 15, 2025</div>
-        <div class="tl-text"><strong>Shared task submission deadline</strong></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date past">October 1, 2025</div>
-        <div class="tl-text"><strong>Decision notification</strong></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date done">October 29, 2025</div>
-        <div class="tl-text"><strong>Global PIQA v0.1 released</strong> — dataset on <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel">Hugging Face</a> and <a href="https://arxiv.org/abs/2510.24081">preprint</a> published.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date done">November 5–9, 2025</div>
-        <div class="tl-text"><strong>MRL Workshop @ EMNLP 2025</strong> — Suzhou, China.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date done">Late 2025 – Early 2026</div>
-        <div class="tl-text"><strong>Benchmark paper preparation</strong> — organizers and authors working together to prepare the compiled dataset and paper for publication.</div>
-      </div>
-    </div>
-  </section>
 
-  <!-- NEWS -->
-  <section>
-    <h2>News</h2>
-    <div class="news-item">
-      <span class="news-tag">Oct 29, 2025</span>
-      <span class="news-text"><strong>Global PIQA v0.1 is out.</strong> Check out the dataset on <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel">Hugging Face</a> or the <a href="https://arxiv.org/abs/2510.24081">preprint</a>.</span>
+    <div class="callout">
+      <h3>Still want to contribute?</h3>
+      <p>Global PIQA is no longer accepting submissions, but fill out the interest form and we'll be in touch about future projects!</p>
+      <div class="btn-row">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFeJihiU8UHmb51zuBtLGfa1xq5Lf3tWfZ9EJz2Ud0UiC3Yw/viewform" class="btn btn-orange">Register Interest</a>
+      </div>
     </div>
-    <div class="news-item">
-      <span class="news-tag">Nov 9, 2025</span>
-      <span class="news-text"><strong>MRL Workshop held at EMNLP 2025</strong> in Suzhou, China.</span>
-    </div>
-  </section>
 
-  <!-- RESOURCES -->
-  <section>
-    <h2>Resources</h2>
-    <ul class="link-list">
-      <li><a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel">Global PIQA v0.1 — Hugging Face dataset</a></li>
-      <li><a href="https://arxiv.org/abs/2510.24081">Global PIQA preprint (arXiv 2510.24081)</a></li>
-      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc73SSB2Med_SEpsSvOEcw50g3Y1kkK6od8ZfRlL0162vi3lw/viewform?usp=header">Contribute to Global PIQA — interest form</a></li>
-      <li><a href="https://docs.google.com/presentation/d/17zCG1zQOdr2cD-VRc7xlrPtpoE8yKIAdu00uRJTN9-M/edit?usp=sharing">Organizer slides — instructions &amp; FAQs</a></li>
-      <li><a href="https://docs.google.com/document/d/1zy3cq2rRUvcI4FYGhAEbQv1g4qhnONr9QPRlBhElL3o/edit?usp=sharing">Get Involved — general document</a></li>
-      <li><a href="https://sigtyp.github.io/ws2025-mrl.html">MRL 2025 Workshop (SIGTYP)</a></li>
-      <li><a href="https://github.com/mrlbenchmarks">MRL Benchmarks — GitHub</a></li>
-      <li><a href="https://x.com/mrl_workshop">Twitter/X @mrl_workshop</a></li>
-      <li><a href="https://bsky.app/profile/mrl-workshop.bsky.social">Bluesky @mrl-workshop.bsky.social</a></li>
-    </ul>
-  </section>
+
+
 
   <!-- CONTACT -->
   <section id="contact">
