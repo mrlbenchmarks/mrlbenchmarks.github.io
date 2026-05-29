@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — MRL Benchmarks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange:  #ea5b20;
+  --amber:   #f79004;
+  --peach:   #f6b678;
+  --yellow:  #fad300;
+  --blue:    #2873b7;
+  --navy:    #274c71;
+  --cream:   #f8f5e1;
+  --black:   #000000;
+  --slate:   #555d63;
+  --max: 900px;
+  --pad: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  background: var(--cream);
+  color: var(--black);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── MENU ── */
+.menu { background: var(--cream); border-bottom: 2px solid rgba(39,76,113,0.15); position: sticky; top: 0; z-index: 100; width: 100%; }
+.menu-table { display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 var(--pad); height: 60px; }
+.logo a { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 36px; width: auto; display: block; }
+.menu-button { display: none; padding: 0.5rem; text-decoration: none; }
+.menu-button img { width: 24px; height: 24px; }
+.menu-items { display: flex; align-items: center; gap: 0.1rem; }
+.menu-items a, .dropbtn { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; border: none; background: none; cursor: pointer; display: inline-block; }
+.menu-items a:hover, .dropbtn:hover, .menu-items a.active { color: var(--orange); background: rgba(39,76,113,0.07); }
+.dropdown { position: relative; }
+.dropdown-content { display: none; position: absolute; top: calc(100% + 4px); right: 0; background: var(--cream); border: 1px solid rgba(39,76,113,0.15); border-radius: 6px; min-width: 140px; overflow: hidden; z-index: 200; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.dropdown-content a { display: block; padding: 0.55rem 1rem; border-radius: 0; color: var(--navy) !important; }
+.dropdown-content a:hover { background: rgba(39,76,113,0.07); color: var(--orange) !important; }
+.dropdown:hover .dropdown-content { display: block; }
+.flex-row-center { display: flex; flex-direction: row; align-items: center; }
+.flex-row-space-between { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+.flex-item { flex: 1; justify-content: flex-end; }
+@media (max-width: 680px) {
+  .menu-button { display: block; }
+  .menu-items { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--cream); flex-direction: column; align-items: flex-start; padding: 0.5rem var(--pad) 1rem; border-top: 1px solid rgba(39,76,113,0.15); gap: 0; }
+  .menu-items.open { display: flex; }
+  .menu-items a, .dropbtn { width: 100%; padding: 0.6rem 0; }
+  .dropdown-content { position: static; background: rgba(39,76,113,0.04); border: none; border-radius: 0; box-shadow: none; }
+}
+
+/* ── ACCENT BAR ── */
+.accent-bar {
+  height: 5px;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--amber) 33%, var(--yellow) 66%, var(--blue) 100%);
+}
+
+/* ── PAGE HEADER ── */
+.page-header {
+  background: var(--cream);
+  padding: clamp(2.5rem, 6vw, 4rem) var(--pad) clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid rgba(39,76,113,0.12);
+  position: relative;
+  overflow: hidden;
+}
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -80px;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(234,91,32,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.page-header-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.page-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 0.6rem;
+}
+h1 {
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 0.6rem;
+}
+.page-sub {
+  font-size: 0.95rem;
+  color: var(--slate);
+  max-width: 55ch;
+  line-height: 1.7;
+}
+
+/* ── MAIN ── */
+.main { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+section { padding: 3rem 0; border-top: 1px solid rgba(0,0,0,0.08); }
+section:first-of-type { border-top: none; padding-top: 3rem; }
+
+h2 {
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+h3 {
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 0.6rem;
+  margin-top: 1.75rem;
+}
+h3:first-child { margin-top: 0; }
+p { color: var(--slate); margin-bottom: 0.9rem; font-size: 0.95rem; }
+p:last-child { margin-bottom: 0; }
+a { color: var(--blue); }
+a:hover { color: var(--navy); }
+strong { color: var(--black); font-weight: 800; }
+
+/* ── CONTACT CARDS ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.contact-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.09);
+  border-radius: 10px;
+  padding: 1.5rem 1.5rem 1.35rem;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.contact-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.09); transform: translateY(-2px); }
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: var(--orange);
+}
+.contact-card.blue::before { background: var(--blue); }
+.contact-card.navy::before { background: var(--navy); }
+.contact-card .card-icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.contact-card .card-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 0.25rem;
+}
+.contact-card .card-value {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--navy);
+  word-break: break-all;
+}
+
+/* ── CTA CALLOUT ── */
+.callout {
+  background: var(--navy);
+  border-radius: 10px;
+  padding: 2rem 2.25rem;
+  margin: 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.callout::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  height: 4px; width: 100%;
+  background: linear-gradient(90deg, var(--orange), var(--yellow));
+}
+.callout h2 { color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.callout p { color: rgba(255,255,255,0.75); font-size: 0.92rem; }
+.callout .btn-row { margin-top: 1.25rem; }
+
+/* ── BUTTONS ── */
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.15s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-orange { background: var(--orange); color: #fff; border-color: var(--orange); }
+.btn-orange:hover { background: #d44d18; border-color: #d44d18; }
+.btn-outline { color: #fff; border-color: rgba(255,255,255,0.3); background: transparent; }
+.btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+.btn-dark { background: var(--navy); color: #fff; border-color: var(--navy); }
+.btn-dark:hover { background: var(--black); border-color: var(--black); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--black);
+  color: rgba(255,255,255,0.45);
+  padding: 2.5rem var(--pad);
+  font-size: 0.8rem;
+  margin-top: 5rem;
+}
+.footer-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+footer a { color: rgba(255,255,255,0.55); }
+footer a:hover { color: #fff; }
+.footer-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<!-- MENU -->
+<div class="menu">
+  <div class="menu-table flex-row-space-between">
+    <div class="logo flex-row-center">
+      <a href="index.html"><img src="https://raw.githubusercontent.com/mrlbenchmarks/mrlbenchmarks.github.io/master/img/mrl_logo.png" alt="MRL Benchmarks"></a>
+    </div>
+    <a class="menu-button" tabindex="0" href="javascript:void(0)" onclick="this.closest('.menu').querySelector('.menu-items').classList.toggle('open')">
+      <img src="img/menu.png" alt="Menu">
+    </a>
+    <div class="menu-items flex-row-center flex-item">
+      <a href="index.html">2026 Shared Task</a>
+      <a href="previous_tasks.html">2025 Task</a>
+      <a href="https://sigtyp.github.io/ws2026-mrl.html">Workshop</a>
+      <a href="contact.html" class="active">Contact</a>
+      <div class="dropdown">
+        <a class="dropbtn" href="javascript:void(0)">Socials &#9662;</a>
+        <div class="dropdown-content">
+          <a href="https://x.com/mrl_workshop">Twitter/X</a>
+          <a href="https://bsky.app/profile/mrl-workshop.bsky.social">BlueSky</a>
+        </div>
+      </div>
+      <a href="https://github.com/mrlbenchmarks">GitHub</a>
+    </div>
+  </div>
+</div>
+
+<div class="accent-bar"></div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-label">Get in Touch</div>
+    <h1>Contact</h1>
+    <p class="page-sub">Questions about participation, the task format, or the submission process? Reach out to the organizers through any of the channels below.</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="main">
+
+  <section>
+    <h2>Reach the Organizers</h2>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:mrl2026-workshop@googlegroups.com">
+        <span class="card-icon">&#9993;</span>
+        <div class="card-label">Email</div>
+        <div class="card-value">mrl2026-workshop@googlegroups.com</div>
+      </a>
+      <a class="contact-card blue" href="https://x.com/mrl_workshop" target="_blank" rel="noopener">
+        <span class="card-icon">&#120143;</span>
+        <div class="card-label">Twitter / X</div>
+        <div class="card-value">@mrl_workshop</div>
+      </a>
+      <a class="contact-card navy" href="https://bsky.app/profile/mrl-workshop.bsky.social" target="_blank" rel="noopener">
+        <span class="card-icon">&#9729;</span>
+        <div class="card-label">Bluesky</div>
+        <div class="card-value">@mrl-workshop.bsky.social</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout">
+      <h2>Ready to Participate?</h2>
+      <p>Register your interest for the MRL 2026 Shared Task and we'll keep you updated as details are announced.</p>
+      <div class="btn-row">
+        <a href="https://docs.google.com/document/d/1zy3cq2rRUvcI4FYGhAEbQv1g4qhnONr9QPRlBhElL3o/edit?usp=sharing" class="btn btn-orange">Register Interest</a>
+        <a href="mailto:mrl2026-workshop@googlegroups.com" class="btn btn-outline">Email Organizers</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div style="font-weight:800; color:rgba(255,255,255,0.7); margin-bottom:0.25rem; letter-spacing:0.05em; text-transform:uppercase; font-size:0.78rem;">MRL Benchmarks</div>
+      <div>Benchmarks for the Multilingual Representation Learning Workshop</div>
+    </div>
+    <div class="footer-links">
+      <a href="2025.html">2025 Task</a>
+      <a href="https://github.com/mrlbenchmarks">GitHub</a>
+      <a href="https://huggingface.co/mrlbenchmarks">Hugging Face</a>
+      <a href="https://x.com/mrl_workshop">Twitter/X</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
