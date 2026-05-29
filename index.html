@@ -428,22 +428,24 @@ footer a:hover { color: #fff; }
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">MRL Workshop @ EMNLP 2026</div>
+    <!-- <div class="hero-badge">MRL Workshop @ EMNLP 2026</div> -->
     <h1>MRL 2026<br><span>Shared Task</span></h1>
-    <p class="hero-sub">Multilingual Representation Learning</p>
+    <p class="hero-sub">Multilingual Representation Learning Workshop @ EMNLP 2026</p>
     <p class="hero-desc">
-      We invite the community to contribute to the next edition of our multilingual benchmark shared task, co-located with the MRL Workshop at EMNLP 2026. Details on the task focus will be announced soon.
+      Following the structure of <a href="https://mrlbenchmarks.github.io/previous_tasks.html">last year's shared task</a>, this year's MRL Workshop Shared Task 
+      to create a community-written multilingual benchmark. The task will be question answering, similar to 
+      <a href="https://arxiv.org/abs/2502.21228">ECLeKTic</a>. This year's task will be multimodal and will include audio and text formats. 
     </p>
     <div class="btn-row">
-      <a href="https://docs.google.com/document/d/1zy3cq2rRUvcI4FYGhAEbQv1g4qhnONr9QPRlBhElL3o/edit?usp=sharing" class="btn btn-orange">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFeJihiU8UHmb51zuBtLGfa1xq5Lf3tWfZ9EJz2Ud0UiC3Yw/viewform" class="btn btn-orange">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
         Register Interest
       </a>
-      <a href="https://github.com/mrlbenchmarks" class="btn btn-outline">
+      <!-- <a href="https://github.com/mrlbenchmarks" class="btn btn-outline">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.37-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.82.57C20.56 21.79 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
         GitHub
       </a>
-      <a href="https://huggingface.co/mrlbenchmarks" class="btn btn-outline">&#x1F917; Hugging Face</a>
+      <a href="https://huggingface.co/mrlbenchmarks" class="btn btn-outline">&#x1F917; Hugging Face</a> -->
     </div>
   </div>
 </div>
@@ -454,44 +456,29 @@ footer a:hover { color: #fff; }
   <!-- OVERVIEW -->
   <section id="overview">
     <h2>Overview</h2>
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-number">100+</div>
-        <div class="stat-label">Languages</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number blue">5</div>
-        <div class="stat-label">Continents</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number amber">23</div>
-        <div class="stat-label">Writing Systems</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number" style="color:var(--navy);">14</div>
-        <div class="stat-label">Language Families</div>
-      </div>
-    </div>
-
+    
     <p>
-      The MRL Shared Task series creates community-built multilingual benchmarks that push the frontier of evaluation for large multilingual models.
-      Our 2025 edition produced <strong>Global PIQA</strong>, a physical commonsense reasoning benchmark spanning over 100 languages across five continents.
+      Last year, over 350 contributors from around the world came together to create <strong>Global PIQA</strong>. 
+      This dataset evaluates culturally specific commonsense reasoning performance for over 100 language varieties.
+      All contributors were invited to be authors on the dataset.
     </p>
     <p>
-      The <strong>2026 Shared Task</strong> is the next chapter. We are inviting researchers and language community members to shape the task focus.
+      The <strong>2026 Shared Task</strong> will follow the same shared task format. 
+      We are inviting researchers and language community members to shape the task focus.
       All accepted submission authors will be included on the resulting benchmark paper.
-      We especially encourage participation from speakers of low-resource languages and non-prestige varieties.
+      We especially encourage participation from speakers of low-resource languages and non-standard or non-prestige varieties.
     </p>
 
     <div class="callout">
       <h3>2025 Results Now Available</h3>
       <p>
-        Global PIQA v0.1 was released in October 2025. Explore the dataset on Hugging Face or read the preprint. See the <a href="2025.html">2025 Shared Task page</a> for full details.
+        Global PIQA v0.1 was released in October 2025. Explore the dataset on Hugging Face or read the preprint. 
+        See the <a href="previous_tasks.html">2025 Shared Task page</a> for full details.
       </p>
       <div class="btn-row">
-        <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel" class="btn btn-outline">&#x1F917; Dataset</a>
         <a href="https://arxiv.org/abs/2510.24081" class="btn btn-outline">Preprint</a>
-        <a href="2025.html" class="btn btn-outline">2025 Task &#8594;</a>
+        <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel" class="btn btn-outline">&#x1F917; Dataset</a>
+        <a href="previous_tasks.html" class="btn btn-outline">2025 Task &#8594;</a>
       </div>
     </div>
   </section>
@@ -500,27 +487,11 @@ footer a:hover { color: #fff; }
   <section id="task">
     <h2>Task Format</h2>
     <p>
-      Detailed task specifications for 2026 will be announced in early 2026. Based on the success of Global PIQA, the 2026 task will continue to prioritize <strong>community-created, culturally-grounded evaluation data</strong> for non-English languages. Stay tuned and register your interest below.
+      
     </p>
 
-    <h3>What to Expect</h3>
-    <div class="format-grid">
-      <div class="format-card">
-        <h4>Dataset Submissions</h4>
-        <p>Contribute evaluation datasets for your language(s). Detailed format requirements TBA.</p>
-      </div>
-      <div class="format-card blue">
-        <h4>Paper Track</h4>
-        <p>Submit a dataset description paper alongside your data. Short papers welcome.</p>
-      </div>
-      <div class="format-card amber">
-        <h4>Benchmark Paper</h4>
-        <p>All accepted contributors join as co-authors on the resulting compiled benchmark paper.</p>
-      </div>
-    </div>
-
-    <h3>2025 Data Format (Reference)</h3>
-    <p>The 2025 task used PIQA-style format. 2026 format details will be released soon.</p>
+    <h3>Task Format (Reference)</h3>
+    <p>2026 format details will be released soon.</p>
     <div class="code-block">
       <span class="punc">{</span><br>
       &nbsp;&nbsp;<span class="key">"prompt"</span><span class="punc">:</span> <span class="val">"When a light metal cup falls off a counter,"</span><span class="punc">,</span><br>
@@ -537,46 +508,43 @@ footer a:hover { color: #fff; }
     <p>All deadlines are <strong>Anywhere on Earth (AoE)</strong>. Dates subject to change — register your interest to receive updates.</p>
     <div class="timeline">
       <div class="tl-item">
-        <div class="tl-date upcoming">Early 2026</div>
+        <div class="tl-date upcoming">June 2026</div>
         <div class="tl-text"><strong>Call for participation released</strong> — task specifications and submission guidelines published.</div>
       </div>
       <div class="tl-item">
-        <div class="tl-date upcoming">Spring 2026</div>
-        <div class="tl-text"><strong>Dataset submission deadline</strong> — submit your dataset and paper.</div>
+        <div class="tl-date upcoming">July 2026</div>
+        <div class="tl-text"><strong>Information Session</strong> — online event to find out how to participate and ask questions.</div>
       </div>
       <div class="tl-item">
-        <div class="tl-date upcoming">Spring 2026</div>
+        <div class="tl-date upcoming">August 2026</div>
+        <div class="tl-text"><strong>Dataset submission deadline</strong> — submit your dataset and dataset description.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date upcoming">September 2026</div>
         <div class="tl-text"><strong>Decision notification</strong> — acceptance decisions sent to participants.</div>
       </div>
       <div class="tl-item">
-        <div class="tl-date upcoming">Summer 2026</div>
-        <div class="tl-text"><strong>MRL Workshop @ EMNLP 2026</strong> — shared task results presented at the workshop.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date upcoming">2026</div>
+        <div class="tl-date upcoming">Early October 2026</div>
         <div class="tl-text"><strong>Benchmark paper publication</strong> — organizers work with authors to compile and publish the final dataset and paper.</div>
       </div>
+      <div class="tl-item">
+        <div class="tl-date upcoming">October 24-29 2026</div>
+        <div class="tl-text"><strong>MRL Workshop @ EMNLP 2026</strong> — shared task results presented at the workshop.</div>
+      </div>
     </div>
   </section>
 
-  <!-- NEWS -->
-  <section>
-    <h2>News</h2>
-    <div class="news-item">
-      <span class="news-tag">Oct 2025</span>
-      <span class="news-text"><strong>Global PIQA v0.1 released.</strong> Check out the dataset on <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel">Hugging Face</a> and the <a href="https://arxiv.org/abs/2510.24081">preprint</a>.</span>
-    </div>
-    <div class="news-item">
-      <span class="news-tag">Nov 2025</span>
-      <span class="news-text"><strong>MRL Workshop held at EMNLP 2025</strong> in Suzhou, China.</span>
-    </div>
-    <div class="news-item">
-      <span class="news-tag">2026</span>
-      <span class="news-text">MRL 2026 Shared Task announced — details coming soon. <a href="https://docs.google.com/document/d/1zy3cq2rRUvcI4FYGhAEbQv1g4qhnONr9QPRlBhElL3o/edit?usp=sharing">Register your interest &#8594;</a></span>
-    </div>
-  </section>
 
-  <!-- RESOURCES -->
+  <div class="callout">
+    <h3>Interested in contributing?</h3>
+    <p>Fill out the interest form and we'll be in touch.</p>
+    <div class="btn-row">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFeJihiU8UHmb51zuBtLGfa1xq5Lf3tWfZ9EJz2Ud0UiC3Yw/viewform" class="btn btn-orange">Register Interest</a>
+    </div>
+  </div>
+
+
+  <!-- <!-- RESOURCES -->
   <section>
     <h2>Resources</h2>
     <ul class="link-list">
@@ -588,7 +556,7 @@ footer a:hover { color: #fff; }
       <li><a href="https://bsky.app/profile/mrl-workshop.bsky.social">Bluesky @mrl-workshop</a></li>
       <li><a href="2025.html">2025 Shared Task — Global PIQA (archived)</a></li>
     </ul>
-  </section>
+  </section> -->
 
 </main>
 
@@ -596,10 +564,10 @@ footer a:hover { color: #fff; }
   <div class="footer-inner">
     <div>
       <div style="font-weight:800; color:rgba(255,255,255,0.7); margin-bottom:0.25rem; letter-spacing:0.05em; text-transform:uppercase; font-size:0.78rem;">MRL Benchmarks</div>
-      <div>Benchmarks for the Multilingual Representation Learning Workshop</div>
+      <div>Multilingual Representation Learning Workshop</div>
     </div>
     <div class="footer-links">
-      <a href="2025.html">2025 Task</a>
+      <a href="previous_tasks.html">2025 Task</a>
       <a href="https://github.com/mrlbenchmarks">GitHub</a>
       <a href="https://huggingface.co/mrlbenchmarks">Hugging Face</a>
       <a href="https://x.com/mrl_workshop">Twitter/X</a>
