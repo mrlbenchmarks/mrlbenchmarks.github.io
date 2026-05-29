@@ -1,3 +1,21 @@
+# 
+
+color palette:
+#ea5b20, 
+#f79004, 
+#f6b678, 
+#fad300, 
+#2873b7
+#f8f5e1, 
+#000000, 
+#274c71, 
+#555d63
+
+fonts
+Montserrat ExtraBold (headings)
+Montserrat Regular (sub headings, text)
+
+
 # project-website-template
 Demo: https://yenchiah.github.io/project-website-template/
 
