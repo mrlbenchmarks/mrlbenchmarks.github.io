@@ -33,65 +33,31 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── NAV ── */
-nav {
-  background: var(--black);
-  padding: 0 var(--pad);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  gap: 1rem;
+/* ── MENU ── */
+.menu { background: var(--black); position: sticky; top: 0; z-index: 100; width: 100%; }
+.menu-table { display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 var(--pad); height: 60px; }
+.logo a { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 36px; width: auto; display: block; }
+.menu-button { display: none; padding: 0.5rem; text-decoration: none; }
+.menu-button img { width: 24px; height: 24px; filter: invert(1); }
+.menu-items { display: flex; align-items: center; gap: 0.1rem; }
+.menu-items a, .dropbtn { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; border: none; background: none; cursor: pointer; display: inline-block; }
+.menu-items a:hover, .dropbtn:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.dropdown { position: relative; }
+.dropdown-content { display: none; position: absolute; top: calc(100% + 4px); right: 0; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; min-width: 140px; overflow: hidden; z-index: 200; }
+.dropdown-content a { display: block; padding: 0.55rem 1rem; border-radius: 0; color: rgba(255,255,255,0.7) !important; }
+.dropdown-content a:hover { background: rgba(255,255,255,0.06); color: #fff !important; }
+.dropdown:hover .dropdown-content { display: block; }
+.flex-row-center { display: flex; flex-direction: row; align-items: center; }
+.flex-row-space-between { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+.flex-item { flex: 1; justify-content: flex-end; }
+@media (max-width: 680px) {
+  .menu-button { display: block; }
+  .menu-items { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--black); flex-direction: column; align-items: flex-start; padding: 0.5rem var(--pad) 1rem; border-top: 1px solid rgba(255,255,255,0.1); gap: 0; }
+  .menu-items.open { display: flex; }
+  .menu-items a, .dropbtn { width: 100%; padding: 0.6rem 0; }
+  .dropdown-content { position: static; background: rgba(255,255,255,0.04); border: none; border-radius: 0; }
 }
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-.nav-logo {
-  height: 32px;
-  width: auto;
-  display: block;
-}
-.nav-name {
-  font-weight: 800;
-  font-size: 0.85rem;
-  color: #fff;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 0.15rem;
-  list-style: none;
-}
-.nav-links a {
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
-  text-decoration: none;
-  padding: 0.4rem 0.75rem;
-  border-radius: 4px;
-  transition: color 0.15s, background 0.15s;
-  white-space: nowrap;
-}
-.nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
-.nav-links a.active { color: var(--yellow); }
-.nav-links .nav-cta {
-  background: var(--blue);
-  color: #fff !important;
-  border-radius: 100px;
-  padding: 0.35rem 0.85rem;
-}
-.nav-links .nav-cta:hover { background: var(--navy); }
 
 /* ── ARCHIVE RIBBON ── */
 .archive-ribbon {
@@ -448,20 +414,30 @@ footer a:hover { color: #fff; }
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a class="nav-brand" href="index.html">
-    <img class="nav-logo" src="https://raw.githubusercontent.com/mrlbenchmarks/mrlbenchmarks.github.io/main/img/mrl_logo.png" alt="MRL Benchmarks">
-    <span class="nav-name">MRL Benchmarks</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#task">Task</a></li>
-    <li><a href="#dates">Dates</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="index.html" class="nav-cta">2026 Task →</a></li>
-  </ul>
-</nav>
+<!-- MENU -->
+<div class="menu">
+  <div class="menu-table flex-row-space-between">
+    <div class="logo flex-row-center">
+      <a href="index.html"><img src="img/mrl_logo.png" alt="MRL Benchmarks"></a>
+    </div>
+    <a class="menu-button" tabindex="0" href="javascript:void(0)" onclick="this.closest('.menu').querySelector('.menu-items').classList.toggle('open')">
+      <img src="img/menu.png" alt="Menu">
+    </a>
+    <div class="menu-items flex-row-center flex-item">
+      <a href="index.html">2026 Shared Task</a>
+      <a href="2025.html">2025 Task</a>
+      <a href="https://sigtyp.github.io/ws2026-mrl.html">Workshop</a>
+      <div class="dropdown">
+        <a class="dropbtn" href="javascript:void(0)">Socials ▾</a>
+        <div class="dropdown-content">
+          <a href="https://x.com/mrl_workshop">Twitter/X</a>
+          <a href="https://bsky.app/profile/mrl-workshop.bsky.social">BlueSky</a>
+        </div>
+      </div>
+      <a href="https://github.com/mrlbenchmarks">GitHub</a>
+    </div>
+  </div>
+</div>
 
 <!-- ARCHIVE RIBBON -->
 <div class="archive-ribbon">
