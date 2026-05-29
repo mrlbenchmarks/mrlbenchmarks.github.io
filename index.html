@@ -34,44 +34,45 @@ body {
 }
 
 /* ── MENU ── */
-.menu { background: var(--black); position: sticky; top: 0; z-index: 100; width: 100%; }
+.menu { background: var(--cream); border-bottom: 2px solid rgba(39,76,113,0.15); position: sticky; top: 0; z-index: 100; width: 100%; }
 .menu-table { display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 var(--pad); height: 60px; }
 .logo a { display: flex; align-items: center; text-decoration: none; }
 .logo img { height: 36px; width: auto; display: block; }
 .menu-button { display: none; padding: 0.5rem; text-decoration: none; }
-.menu-button img { width: 24px; height: 24px; filter: invert(1); }
+.menu-button img { width: 24px; height: 24px; }
 .menu-items { display: flex; align-items: center; gap: 0.1rem; }
-.menu-items a, .dropbtn { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; border: none; background: none; cursor: pointer; display: inline-block; }
-.menu-items a:hover, .dropbtn:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.menu-items a, .dropbtn { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; border: none; background: none; cursor: pointer; display: inline-block; }
+.menu-items a:hover, .dropbtn:hover { color: var(--orange); background: rgba(39,76,113,0.07); }
 .dropdown { position: relative; }
-.dropdown-content { display: none; position: absolute; top: calc(100% + 4px); right: 0; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; min-width: 140px; overflow: hidden; z-index: 200; }
-.dropdown-content a { display: block; padding: 0.55rem 1rem; border-radius: 0; color: rgba(255,255,255,0.7) !important; }
-.dropdown-content a:hover { background: rgba(255,255,255,0.06); color: #fff !important; }
+.dropdown-content { display: none; position: absolute; top: calc(100% + 4px); right: 0; background: var(--cream); border: 1px solid rgba(39,76,113,0.15); border-radius: 6px; min-width: 140px; overflow: hidden; z-index: 200; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.dropdown-content a { display: block; padding: 0.55rem 1rem; border-radius: 0; color: var(--navy) !important; }
+.dropdown-content a:hover { background: rgba(39,76,113,0.07); color: var(--orange) !important; }
 .dropdown:hover .dropdown-content { display: block; }
 .flex-row-center { display: flex; flex-direction: row; align-items: center; }
 .flex-row-space-between { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
 .flex-item { flex: 1; justify-content: flex-end; }
 @media (max-width: 680px) {
   .menu-button { display: block; }
-  .menu-items { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--black); flex-direction: column; align-items: flex-start; padding: 0.5rem var(--pad) 1rem; border-top: 1px solid rgba(255,255,255,0.1); gap: 0; }
+  .menu-items { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--cream); flex-direction: column; align-items: flex-start; padding: 0.5rem var(--pad) 1rem; border-top: 1px solid rgba(39,76,113,0.15); gap: 0; }
   .menu-items.open { display: flex; }
   .menu-items a, .dropbtn { width: 100%; padding: 0.6rem 0; }
-  .dropdown-content { position: static; background: rgba(255,255,255,0.04); border: none; border-radius: 0; }
+  .dropdown-content { position: static; background: rgba(39,76,113,0.04); border: none; border-radius: 0; box-shadow: none; }
 }
 
 /* ── HERO ── */
 .hero {
-  background: var(--black);
+  background: var(--cream);
   padding: clamp(3.5rem, 9vw, 6rem) var(--pad) clamp(3rem, 7vw, 5rem);
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid rgba(39,76,113,0.12);
 }
 .hero::before {
   content: '';
   position: absolute;
   top: -80px; right: -120px;
   width: 480px; height: 480px;
-  background: radial-gradient(circle, rgba(234,91,32,0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(234,91,32,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero::after {
@@ -79,7 +80,7 @@ body {
   position: absolute;
   bottom: -60px; left: -80px;
   width: 360px; height: 360px;
-  background: radial-gradient(circle, rgba(40,115,183,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(40,115,183,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-inner {
@@ -92,9 +93,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(234,91,32,0.18);
-  border: 1px solid rgba(234,91,32,0.4);
-  color: var(--peach);
+  background: rgba(234,91,32,0.12);
+  border: 1px solid rgba(234,91,32,0.35);
+  color: var(--orange);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -109,20 +110,20 @@ h1 {
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: var(--black);
   margin-bottom: 0.5rem;
 }
 h1 span { color: var(--orange); }
 .hero-sub {
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   font-weight: 400;
-  color: rgba(255,255,255,0.5);
+  color: var(--navy);
   margin-bottom: 1rem;
   letter-spacing: 0.02em;
 }
 .hero-desc {
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.65);
+  color: var(--slate);
   max-width: 62ch;
   line-height: 1.75;
   margin-bottom: 2rem;
@@ -147,12 +148,12 @@ h1 span { color: var(--orange); }
 .btn:hover { transform: translateY(-1px); }
 .btn-orange { background: var(--orange); color: #fff; border-color: var(--orange); }
 .btn-orange:hover { background: #d44d18; border-color: #d44d18; }
-.btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,0.25); }
-.btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.06); }
+.btn-outline { background: transparent; color: var(--navy); border-color: rgba(39,76,113,0.3); }
+.btn-outline:hover { border-color: var(--navy); background: rgba(39,76,113,0.06); }
 .btn-blue { background: var(--blue); color: #fff; border-color: var(--blue); }
 .btn-blue:hover { background: var(--navy); border-color: var(--navy); }
-.btn-dark { background: var(--black); color: #fff; border-color: #333; }
-.btn-dark:hover { border-color: #fff; }
+.btn-dark { background: var(--navy); color: #fff; border-color: var(--navy); }
+.btn-dark:hover { background: var(--black); border-color: var(--black); }
 .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
 
 /* ── ACCENT BAR ── */
@@ -214,6 +215,8 @@ strong { color: var(--black); font-weight: 800; }
 .callout p { color: rgba(255,255,255,0.75); font-size: 0.92rem; }
 .callout a { color: var(--peach); }
 .callout .btn-row { margin-top: 1.25rem; }
+.callout .btn-outline { color: #fff; border-color: rgba(255,255,255,0.3); }
+.callout .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
 
 /* ── STATS STRIP ── */
 .stats {
@@ -407,8 +410,9 @@ footer a:hover { color: #fff; }
       <a href="index.html">2026 Shared Task</a>
       <a href="previous_tasks.html">2025 Task</a>
       <a href="https://sigtyp.github.io/ws2026-mrl.html">Workshop</a>
+      <a href="contact.html">Contact</a>
       <div class="dropdown">
-        <a class="dropbtn" href="javascript:void(0)">Socials ▾</a>
+        <a class="dropbtn" href="javascript:void(0)">Socials &#9662;</a>
         <div class="dropdown-content">
           <a href="https://x.com/mrl_workshop">Twitter/X</a>
           <a href="https://bsky.app/profile/mrl-workshop.bsky.social">BlueSky</a>
@@ -424,11 +428,11 @@ footer a:hover { color: #fff; }
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">MRL Workshop @ ACL 2026</div>
+    <div class="hero-badge">MRL Workshop @ EMNLP 2026</div>
     <h1>MRL 2026<br><span>Shared Task</span></h1>
     <p class="hero-sub">Multilingual Representation Learning</p>
     <p class="hero-desc">
-      We invite the community to contribute to the next edition of our multilingual benchmark shared task, co-located with the MRL Workshop at ACL 2026. Details on the task focus will be announced soon.
+      We invite the community to contribute to the next edition of our multilingual benchmark shared task, co-located with the MRL Workshop at EMNLP 2026. Details on the task focus will be announced soon.
     </p>
     <div class="btn-row">
       <a href="https://docs.google.com/document/d/1zy3cq2rRUvcI4FYGhAEbQv1g4qhnONr9QPRlBhElL3o/edit?usp=sharing" class="btn btn-orange">
@@ -439,7 +443,7 @@ footer a:hover { color: #fff; }
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.57v-2c-3.34.72-4.04-1.61-4.04-1.61-.54-1.37-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.82.57C20.56 21.79 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
         GitHub
       </a>
-      <a href="https://huggingface.co/mrlbenchmarks" class="btn btn-outline">🤗 Hugging Face</a>
+      <a href="https://huggingface.co/mrlbenchmarks" class="btn btn-outline">&#x1F917; Hugging Face</a>
     </div>
   </div>
 </div>
@@ -485,9 +489,9 @@ footer a:hover { color: #fff; }
         Global PIQA v0.1 was released in October 2025. Explore the dataset on Hugging Face or read the preprint. See the <a href="2025.html">2025 Shared Task page</a> for full details.
       </p>
       <div class="btn-row">
-        <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel" class="btn btn-outline">🤗 Dataset</a>
+        <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel" class="btn btn-outline">&#x1F917; Dataset</a>
         <a href="https://arxiv.org/abs/2510.24081" class="btn btn-outline">Preprint</a>
-        <a href="2025.html" class="btn btn-outline">2025 Task →</a>
+        <a href="2025.html" class="btn btn-outline">2025 Task &#8594;</a>
       </div>
     </div>
   </section>
@@ -546,7 +550,7 @@ footer a:hover { color: #fff; }
       </div>
       <div class="tl-item">
         <div class="tl-date upcoming">Summer 2026</div>
-        <div class="tl-text"><strong>MRL Workshop @ ACL 2026</strong> — shared task results presented at the workshop.</div>
+        <div class="tl-text"><strong>MRL Workshop @ EMNLP 2026</strong> — shared task results presented at the workshop.</div>
       </div>
       <div class="tl-item">
         <div class="tl-date upcoming">2026</div>
@@ -568,7 +572,7 @@ footer a:hover { color: #fff; }
     </div>
     <div class="news-item">
       <span class="news-tag">2026</span>
-      <span class="news-text">MRL 2026 Shared Task announced — details coming soon. <a href="https://docs.google.com/document/d/1zy3cq2rRUvcI4FYGhAEbQv1g4qhnONr9QPRlBhElL3o/edit?usp=sharing">Register your interest →</a></span>
+      <span class="news-text">MRL 2026 Shared Task announced — details coming soon. <a href="https://docs.google.com/document/d/1zy3cq2rRUvcI4FYGhAEbQv1g4qhnONr9QPRlBhElL3o/edit?usp=sharing">Register your interest &#8594;</a></span>
     </div>
   </section>
 
@@ -584,21 +588,6 @@ footer a:hover { color: #fff; }
       <li><a href="https://bsky.app/profile/mrl-workshop.bsky.social">Bluesky @mrl-workshop</a></li>
       <li><a href="2025.html">2025 Shared Task — Global PIQA (archived)</a></li>
     </ul>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Questions about participation, the task format, or the submission process? Reach out to the organizers.</p>
-    <p>
-      Email: <a href="mailto:mrl2026-workshop@googlegroups.com">mrl2026-workshop@googlegroups.com</a><br>
-      Twitter/X: <a href="https://x.com/mrl_workshop">@mrl_workshop</a><br>
-      Bluesky: <a href="https://bsky.app/profile/mrl-workshop.bsky.social">@mrl-workshop.bsky.social</a>
-    </p>
-    <div class="btn-row" style="margin-top:1.25rem;">
-      <a href="https://docs.google.com/document/d/1zy3cq2rRUvcI4FYGhAEbQv1g4qhnONr9QPRlBhElL3o/edit?usp=sharing" class="btn btn-orange">Register Interest</a>
-      <a href="mailto:mrl2026-workshop@googlegroups.com" class="btn btn-dark">Email Organizers</a>
-    </div>
   </section>
 
 </main>
