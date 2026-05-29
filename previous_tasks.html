@@ -34,29 +34,29 @@ body {
 }
 
 /* ── MENU ── */
-.menu { background: var(--black); position: sticky; top: 0; z-index: 100; width: 100%; }
+.menu { background: var(--cream); border-bottom: 2px solid rgba(39,76,113,0.15); position: sticky; top: 0; z-index: 100; width: 100%; }
 .menu-table { display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 0 var(--pad); height: 60px; }
 .logo a { display: flex; align-items: center; text-decoration: none; }
 .logo img { height: 36px; width: auto; display: block; }
 .menu-button { display: none; padding: 0.5rem; text-decoration: none; }
-.menu-button img { width: 24px; height: 24px; filter: invert(1); }
+.menu-button img { width: 24px; height: 24px; }
 .menu-items { display: flex; align-items: center; gap: 0.1rem; }
-.menu-items a, .dropbtn { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; border: none; background: none; cursor: pointer; display: inline-block; }
-.menu-items a:hover, .dropbtn:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.menu-items a, .dropbtn { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 4px; transition: color 0.15s, background 0.15s; white-space: nowrap; border: none; background: none; cursor: pointer; display: inline-block; }
+.menu-items a:hover, .dropbtn:hover { color: var(--orange); background: rgba(39,76,113,0.07); }
 .dropdown { position: relative; }
-.dropdown-content { display: none; position: absolute; top: calc(100% + 4px); right: 0; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; min-width: 140px; overflow: hidden; z-index: 200; }
-.dropdown-content a { display: block; padding: 0.55rem 1rem; border-radius: 0; color: rgba(255,255,255,0.7) !important; }
-.dropdown-content a:hover { background: rgba(255,255,255,0.06); color: #fff !important; }
+.dropdown-content { display: none; position: absolute; top: calc(100% + 4px); right: 0; background: var(--cream); border: 1px solid rgba(39,76,113,0.15); border-radius: 6px; min-width: 140px; overflow: hidden; z-index: 200; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.dropdown-content a { display: block; padding: 0.55rem 1rem; border-radius: 0; color: var(--navy) !important; }
+.dropdown-content a:hover { background: rgba(39,76,113,0.07); color: var(--orange) !important; }
 .dropdown:hover .dropdown-content { display: block; }
 .flex-row-center { display: flex; flex-direction: row; align-items: center; }
 .flex-row-space-between { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
 .flex-item { flex: 1; justify-content: flex-end; }
 @media (max-width: 680px) {
   .menu-button { display: block; }
-  .menu-items { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--black); flex-direction: column; align-items: flex-start; padding: 0.5rem var(--pad) 1rem; border-top: 1px solid rgba(255,255,255,0.1); gap: 0; }
+  .menu-items { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--cream); flex-direction: column; align-items: flex-start; padding: 0.5rem var(--pad) 1rem; border-top: 1px solid rgba(39,76,113,0.15); gap: 0; }
   .menu-items.open { display: flex; }
   .menu-items a, .dropbtn { width: 100%; padding: 0.6rem 0; }
-  .dropdown-content { position: static; background: rgba(255,255,255,0.04); border: none; border-radius: 0; }
+  .dropdown-content { position: static; background: rgba(39,76,113,0.04); border: none; border-radius: 0; box-shadow: none; }
 }
 
 /* ── ARCHIVE RIBBON ── */
