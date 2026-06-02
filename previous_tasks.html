@@ -415,30 +415,15 @@ footer a:hover { color: #fff; }
 <body>
 
 <!-- MENU -->
-<div class="menu">
-  <div class="menu-table flex-row-space-between">
-    <div class="logo flex-row-center">
-      <a href="index.html"><img src="https://raw.githubusercontent.com/mrlbenchmarks/mrlbenchmarks.github.io/master/img/mrl_logo.png" alt="MRL Benchmarks"></a>
-    </div>
-    <a class="menu-button" tabindex="0" href="javascript:void(0)" onclick="this.closest('.menu').querySelector('.menu-items').classList.toggle('open')">
-      <img src="img/menu.png" alt="Menu">
-    </a>
-    <div class="menu-items flex-row-center flex-item">
-      <a href="index.html">2026 Shared Task</a>
-      <a href="2025.html">2025 Task</a>
-      <a href="https://sigtyp.github.io/ws2026-mrl.html">Workshop</a>
-      <div class="dropdown">
-        <a class="dropbtn" href="javascript:void(0)">Socials ▾</a>
-        <div class="dropdown-content">
-          <a href="https://x.com/mrl_workshop">Twitter/X</a>
-          <a href="https://bsky.app/profile/mrl-workshop.bsky.social">BlueSky</a>
-        </div>
-      </div>
-      <a href="https://github.com/mrlbenchmarks">GitHub</a>
-    </div>
-  </div>
-</div>
-
+<div id="nav-placeholder"></div>
+<script>
+  fetch('/menu.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+    });
+</script>
+  
 <!-- ARCHIVE RIBBON -->
 <div class="archive-ribbon">
   This is the archived 2025 Shared Task page. Looking for the current task? <a href="index.html">Go to MRL 2026 →</a>
