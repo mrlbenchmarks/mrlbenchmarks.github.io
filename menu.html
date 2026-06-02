@@ -1,17 +1,19 @@
+<!-- nav.html -->
 <div class="menu">
   <div class="menu-table flex-row-space-between">
     <div class="logo flex-row-center">
-      <a href="index.html">MRL Benchmarks</a>
+      <a href="/index.html"><img src="https://raw.githubusercontent.com/mrlbenchmarks/mrlbenchmarks.github.io/master/img/mrl_logo.png" alt="MRL Benchmarks"></a>
     </div>
-    <a class="menu-button" tabindex="0" href="javascript:void(0)">
-      <img src="img/menu.png">
+    <a class="menu-button" tabindex="0" href="javascript:void(0)" onclick="this.closest('.menu').querySelector('.menu-items').classList.toggle('open')">
+      <img src="/img/menu.png" alt="Menu">
     </a>
     <div class="menu-items flex-row-center flex-item">
-      <a class="menu-index" href="index.html">2026 Shared Task</a>
-      <a class="menu-widget" href="previous_tasks.html">Previous Tasks</a>
-      <a class="menu-embedding" href="https://sigtyp.github.io/ws2026-mrl.html">Workshop</a>
+      <a href="/index.html">2026 Shared Task</a>
+      <a href="/previous_tasks.html">2025 Task</a>
+      <a href="https://sigtyp.github.io/ws2026-mrl.html">Workshop</a>
+      <a href="/contact.html">Contact</a>
       <div class="dropdown">
-        <a class="dropbtn" href="empty.html">Socials<i class="fas fa-caret-down"></i></a>
+        <a class="dropbtn" href="javascript:void(0)">Socials &#9662;</a>
         <div class="dropdown-content">
           <a href="https://x.com/mrl_workshop">Twitter/X</a>
           <a href="https://bsky.app/profile/mrl-workshop.bsky.social">BlueSky</a>
@@ -21,3 +23,4 @@
     </div>
   </div>
 </div>
+<div class="accent-bar"></div>
